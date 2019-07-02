@@ -1,5 +1,8 @@
 @import 'mixins.scss';
 @import 'variables.scss';
+@import 'header.scss';
+@import 'hero_section.scss';
+
 $body-color: blue;
 
 $font: 'Roboto',
@@ -25,103 +28,4 @@ a {
 
 ul {
   @include list-reset;
-}
-
-.title {
-  width: 100%;
-  height: 200px;
-
-  &__flex-cont {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-
-    .logo {
-      transform: translate(68px, -13px);
-    }
-
-    .top-menu {
-      &__main-menu {
-        display: flex;
-        justify-content: center;
-
-        .main-menu__main-menu-item {
-          font-size: 17px;
-
-          &--language {
-            .globe {
-              margin: 0 85px 0 72px
-            }
-          }
-
-          &--sign-in {
-            margin-right: 30px;
-          }
-
-          &--menu {
-            display: flex;
-            width: 255px;
-            justify-content: space-between;
-
-            &__menu-item {
-              font-size: 13px;
-            }
-          }
-
-          &--get-app {
-            display: block;
-            box-sizing: border-box;
-            width: 280px;
-            height: 80px;
-            padding: 47px 138px 16px 57px;
-            margin-right: 43px;
-            background-color: $btn-bgc;
-            transform: translateY(-50px);
-            cursor: pointer;
-
-            .app-text {
-              color: #fff;
-              display: block;
-              width: 105%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.workplace-menu {
-  display: flex;
-  justify-content: center;
-
-  &__ul {
-    display: flex;
-    justify-content: space-between;
-    width: 850px;
-  }
-
-  &__item {
-    position: relative;
-    font-size: 19px;
-
-    &::after {
-      position: absolute;
-      content: '';
-      left: 0;
-      bottom: -6px;
-      width: 0;
-      height: 3px;
-      background-color: $hover-underline-color;
-      transition: width 0.3s;
-    }
-
-    &:nth-child(n+2):hover {
-      font-weight: bold;
-
-      &::after {
-        width: 33px;
-      }
-    }
-  }
 }

@@ -1,0 +1,67 @@
+// HERO SECTION
+.hero {
+    background-color: $hero-sec-bgc;
+    height: $site-max-width; //TEST
+    margin: 0 auto;
+    width: 100%;
+    max-width: $site-max-width;
+
+    &__container {
+        &--section {
+            display: flex;
+            justify-content: space-around;
+            max-height: 737px;
+        }
+
+        &--text {
+            padding-top: 173px;
+        }
+
+        &--image {
+            position: relative;
+            height: inherit;
+            width: 40%;
+            background-image: url('/src/img/desks.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 700px;
+            max-height: 737px;
+            overflow: hidden;
+
+            .hand {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -40%);
+                width: 500px;
+            }
+        }
+    }
+
+    &__title {
+        &--headline {
+            @include big_headline_text;
+            width: 570px; //TEST
+            height: 155px;
+        }
+
+        &--description {
+            @include description-text;
+            width: 600px;
+            margin: 45px 0 59px;
+        }
+    }
+
+    .mobile-store {
+        display: flex;
+        justify-content: space-between;
+        width: 420px;
+
+        &__button {
+            border-style: none;
+            height: 70px;
+            width: 200px;
+            background-color: #000;
+        }
+    }
+}

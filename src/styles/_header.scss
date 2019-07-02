@@ -1,0 +1,108 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+//HEADER
+
+.title {
+    width: 100%;
+    max-width: $site-max-width;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    background-color: $header-bgc;
+
+    &__flex-cont {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .logo {
+            transform: translate(10%, -13px);
+        }
+
+        .top-menu {
+            &__main-menu {
+                display: flex;
+                justify-content: space-between;
+
+                .main-menu__main-menu-item {
+                    font-size: 17px;
+
+                    &--language {
+                        .globe {
+                            margin: 0 4vw 0 3vw
+                        }
+                    }
+
+                    &--sign-in {
+                        margin-right: 30px;
+                    }
+
+                    &--menu {
+                        display: flex;
+                        width: 255px;
+                        justify-content: space-between;
+
+                        .menu__menu-item {
+                            font-size: 13px;
+                        }
+                    }
+
+                    &--get-app {
+                        display: block;
+                        box-sizing: border-box;
+                        width: 280px;
+                        height: 80px;
+                        padding: 47px 138px 16px 57px;
+                        // margin-right: 43px;
+                        background-color: $btn-bgc;
+                        transform: translateY(-50px);
+                        cursor: pointer;
+
+                        .app-text {
+                            color: #fff;
+                            display: block;
+                            width: 105%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.workplace-menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    // width: 50%;
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        width: 850px;
+    }
+
+    &__item {
+        position: relative;
+        font-size: 19px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 3px;
+            background-color: $hover-underline-color;
+            transition: width 0.3s;
+        }
+
+        &:nth-child(n+2):hover {
+            font-weight: bold;
+
+            &::after {
+                width: 33px;
+            }
+        }
+    }
+}

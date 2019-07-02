@@ -6,3 +6,17 @@
     text-decoration: none;
     color: #000;
 }
+
+@mixin big_headline_text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #3146ff;
+    font-size: 70px;
+    line-height: 80px;
+}
+
+@mixin description-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+}
