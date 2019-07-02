@@ -1,7 +1,6 @@
 // HERO SECTION
 .hero {
     background-color: $hero-sec-bgc;
-    height: $site-max-width; //TEST
     margin: 0 auto;
     width: 100%;
     max-width: $site-max-width;
@@ -9,23 +8,24 @@
     &__container {
         &--section {
             display: flex;
-            justify-content: space-around;
-            max-height: 737px;
+            justify-content: space-between;
+            margin-left: 18vw;
         }
 
         &--text {
             padding-top: 173px;
+            max-width: 40%;
         }
 
         &--image {
             position: relative;
             height: inherit;
-            width: 40%;
+            width: 50%;
             background-image: url('/src/img/desks.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 700px;
-            max-height: 737px;
+            height: 700px;
             overflow: hidden;
 
             .hand {
@@ -36,18 +36,38 @@
                 width: 500px;
             }
         }
+
+        &--features {
+            display: flex;
+            justify-content: space-between;
+            width: 1300px;
+            margin: 6vh auto 0 18vw;
+
+            .feature {
+                width: 350px;
+
+                &__title {
+                    @include feature-title;
+                    margin-bottom: 3vh;
+                }
+
+                &__description {
+                    @include feature-description;
+                }
+            }
+        }
     }
 
     &__title {
         &--headline {
             @include big_headline_text;
-            width: 570px; //TEST
+            width: 570px;
             height: 155px;
         }
 
         &--description {
             @include description-text;
-            width: 600px;
+            max-width: 600px;
             margin: 45px 0 59px;
         }
     }
@@ -56,12 +76,5 @@
         display: flex;
         justify-content: space-between;
         width: 420px;
-
-        &__button {
-            border-style: none;
-            height: 70px;
-            width: 200px;
-            background-color: #000;
-        }
     }
 }

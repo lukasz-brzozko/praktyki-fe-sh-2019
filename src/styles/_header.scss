@@ -53,7 +53,6 @@
                         width: 280px;
                         height: 80px;
                         padding: 47px 138px 16px 57px;
-                        // margin-right: 43px;
                         background-color: $btn-bgc;
                         transform: translateY(-50px);
                         cursor: pointer;
@@ -61,7 +60,7 @@
                         .app-text {
                             color: #fff;
                             display: block;
-                            width: 105%;
+                            width: 200%;
                         }
                     }
                 }
@@ -72,9 +71,9 @@
 
 .workplace-menu {
     display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    // width: 50%;
+    justify-content: flex-start;
+    margin: 0 auto 0 18vw;
+    width: 1300px;
 
     &__ul {
         display: flex;
