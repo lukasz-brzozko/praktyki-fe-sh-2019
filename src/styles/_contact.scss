@@ -51,9 +51,14 @@
             width: 40%;
             margin-bottom: 50px;
 
-            &:last-of-type {
+            &:nth-last-child(2) {
                 width: 100%;
             }
+        }
+
+        &--button {
+            width: 1200px;
+            text-align: center;
         }
     }
 
@@ -84,5 +89,14 @@
         height: 6px;
         background-image: radial-gradient($underline-color 1px, #fff 1px);
         background-size: 6px;
+    }
+
+    &__button {
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+        background-color: $btn-bgc;
+        color: #fff;
+        font-size: 17px;
     }
 }

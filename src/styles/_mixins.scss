@@ -69,3 +69,9 @@
     background-color: $hover-underline-color;
     transition: width 0.3s;
 }
+
+@mixin mq-mobile-large {
+    @media (max-width: 900px) {
+        @content;
+    }
+}

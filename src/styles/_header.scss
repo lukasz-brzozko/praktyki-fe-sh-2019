@@ -12,13 +12,37 @@
     background-color: $header-bgc;
     z-index: 99;
 
+    @include mq-mobile-large {
+        padding-bottom: 0;
+        height: 60px;
+        border: 1px solid black;
+    }
+
     &__flex-cont {
         display: flex;
         justify-content: space-between;
         margin-top: $header-top-menu-margin;
 
+        @include mq-mobile-large {
+            margin-top: 0;
+        }
+
         .logo {
             transform: translate(10%, -13px);
+
+            @include mq-mobile-large {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 40px;
+                height: 25px;
+                overflow: hidden;
+                transform: translate(20px, -50%)
+            }
+
+            &__image {
+                cursor: pointer;
+            }
         }
 
         .top-menu {
@@ -26,8 +50,12 @@
                 display: flex;
                 justify-content: space-between;
 
+                @include mq-mobile-large {
+                    display: none;
+                }
+
                 .main-menu__main-menu-item {
-                    font-size: 17px;
+                    font-size: 1.7rem;
 
                     &--language {
                         .globe {
@@ -45,7 +73,7 @@
                         justify-content: space-between;
 
                         .menu__menu-item {
-                            font-size: 13px;
+                            font-size: 1.3rem;
                         }
                     }
 
@@ -69,23 +97,46 @@
             }
         }
     }
+
+    &__menu-hamburger {
+        display: none;
+    }
 }
 
 .workplace-menu {
     display: flex;
     justify-content: flex-start;
     margin: 0 auto 0 18vw;
-    width: 1300px;
+    width: 50vw;
+    min-width: 650px;
 
     &__ul {
         display: flex;
         justify-content: space-between;
         width: 850px;
+
+        @include mq-mobile-large {
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__item {
         position: relative;
-        font-size: 19px;
+        font-size: 1.9rem;
+
+        @include mq-mobile-large {
+            font-size: 1.5rem;
+        }
+
+        &:nth-child(n+2) {
+            @include mq-mobile-large {
+                display: none;
+            }
+        }
 
         &::after {
             @include after-underline
