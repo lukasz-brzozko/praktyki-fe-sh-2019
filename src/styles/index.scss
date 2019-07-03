@@ -1,35 +1,18 @@
+@import 'reset.scss';
 @import 'mixins.scss';
 @import 'variables.scss';
 @import 'header.scss';
 @import 'hero_section.scss';
-
-$body-color: blue;
-
-$font: 'Roboto',
-sans-serif;
-
-* {
-  margin: 0;
-  padding: 0;
-}
+@import 'contact.scss';
 
 html {
   font-size: 10px;
 }
 
 body {
-
-  font-family: $font;
-  color: $body-color;
   max-width: 1920px;
   margin: 0 auto;
-  color: #000;
-}
-
-a {
-  @include anchor-reset
-}
-
-ul {
-  @include list-reset;
+  font-family: $main-font;
+  background-color: $body-bgc;
+  color: $body-font-color;
 }

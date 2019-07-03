@@ -1,0 +1,88 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.contact {
+    margin: 10vh auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &__tab {
+        position: relative;
+        @include contact-tab;
+        margin-right: 30px;
+
+        &::after {
+            @include after-underline;
+        }
+
+        &--active,
+        &:hover {
+            font-weight: bold;
+
+            &::after {
+                width: 33px;
+            }
+        }
+    }
+
+    &__form {
+        width: 1200px;
+        height: 50vh;
+        margin-left: 18vw;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    &__container {
+
+        &--tabs {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin-left: 18vw;
+        }
+
+        &--input {
+            position: relative;
+            width: 40%;
+            margin-bottom: 50px;
+
+            &:last-of-type {
+                width: 100%;
+            }
+        }
+    }
+
+    &__label {
+        @include form-label;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        opacity: .5;
+        display: inline-block;
+        transition: transform .2s;
+    }
+
+    &__input {
+        @include form-input;
+        border-style: none;
+        width: 100%;
+    }
+
+    &__input:focus+&__label,
+    &__input:valid+&__label {
+        transform: translateY(-300%);
+        opacity: 1;
+    }
+
+    &__underline {
+        height: 6px;
+        background-image: radial-gradient($underline-color 1px, #fff 1px);
+        background-size: 6px;
+    }
+}

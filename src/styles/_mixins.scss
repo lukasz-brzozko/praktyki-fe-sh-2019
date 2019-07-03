@@ -1,12 +1,3 @@
-@mixin list-reset {
-    list-style: none;
-}
-
-@mixin anchor-reset {
-    text-decoration: none;
-    color: #000;
-}
-
 @mixin big_headline_text {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -34,4 +25,47 @@
     font-weight: 300;
     font-size: 17px;
     line-height: 25px;
+}
+
+@mixin solutions-title {
+    font-family: "Roboto";
+    color: #000;
+    font-size: 17px;
+}
+
+@mixin solutions-subtitle {
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #000;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+@mixin form-label {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 13px;
+}
+
+@mixin form-input {
+    font-family: 'Roboto';
+    color: #000;
+    font-size: 30px;
+}
+
+@mixin contact-tab {
+    font-family: 'Roboto';
+    color: #000;
+    font-size: 17px;
+}
+
+@mixin after-underline {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background-color: $hover-underline-color;
+    transition: width 0.3s;
 }

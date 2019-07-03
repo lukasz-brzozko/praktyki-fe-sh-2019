@@ -1,11 +1,16 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
 // HERO SECTION
+
 .hero {
     background-color: $hero-sec-bgc;
-    margin: 0 auto;
+    margin: $hero-section-top-marging 0 auto;
     width: 100%;
     max-width: $site-max-width;
 
     &__container {
+
         &--section {
             display: flex;
             justify-content: space-between;
@@ -34,6 +39,48 @@
                 left: 50%;
                 transform: translate(-50%, -40%);
                 width: 500px;
+            }
+        }
+
+
+        &--solutions {
+            margin: 50px auto 0 18vw;
+
+            .solutions {
+
+                &__title {
+                    @include solutions-title;
+                    margin: 10vh 0 3vh;
+                }
+
+                &__ul {
+                    display: flex;
+                    justify-content: space-between;
+                    overflow: hidden;
+                }
+
+                &__item {
+                    flex-shrink: 0;
+                    box-sizing: border-box;
+                    width: 310px;
+                    height: 500px;
+                    padding: 60px;
+                    margin-right: 20px;
+                    background-color: #fff;
+                }
+
+                &__container {
+                    overflow: hidden;
+                }
+
+                &__subtitle {
+                    @include solutions-subtitle;
+                    margin: 8vh 0 3vh;
+                }
+
+                &__description {
+                    @include feature-description;
+                }
             }
         }
 
