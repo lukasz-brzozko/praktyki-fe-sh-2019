@@ -14,8 +14,7 @@
 
     @include mq-mobile-large {
         padding-bottom: 0;
-        height: 60px;
-        border: 1px solid black;
+        height: $header-mobile-height;
     }
 
     &__flex-cont {
@@ -100,6 +99,25 @@
 
     &__menu-hamburger {
         display: none;
+
+        @include mq-mobile-large {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 12px;
+            width: 14px;
+            cursor: pointer;
+        }
+    }
+
+    &__hamburger-element {
+        display: block;
+        height: 2px;
+        background-color: blue;
     }
 }
 
@@ -130,6 +148,27 @@
 
         @include mq-mobile-large {
             font-size: 1.5rem;
+
+            &:first-child::before,
+            &:first-child::after {
+                content: '';
+                width: 12px;
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                background-color: #2a2a2a;
+                border-radius: 20px;
+                transition: auto;
+            }
+
+            &:first-child::before {
+                transform: translate(100%, -50%) rotate(45deg)
+            }
+
+            &:first-child::after {
+                transform: translate(160%, -50%) rotate(135deg)
+            }
         }
 
         &:nth-child(n+2) {

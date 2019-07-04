@@ -1,8 +1,6 @@
-//FONTS
 $main-font: 'Roboto',
 sans-serif;
 
-//COLORS
 $body-bgc: #fff;
 $header-bgc: #fff;
 $btn-bgc: #3146ff;
@@ -11,8 +9,8 @@ $body-font-color: #000;
 $hover-underline-color: #01ffcb;
 $underline-color: #2a2a2a;
 
-//DIMENSIONS
 $site-max-width: 1920px;
 $header-top-menu-margin: 50px;
+$header-mobile-height: 60px;
 $header-padding-bottom: 50px;
 $hero-section-top-marging: 99px+$header-top-menu-margin+$header-padding-bottom;
