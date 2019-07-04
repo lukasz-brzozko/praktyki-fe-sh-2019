@@ -76,6 +76,12 @@
     }
 }
 
+@mixin mq-desktop-small {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
 @mixin mq-mobile-large {
     @media (max-width: 900px) {
         @content;

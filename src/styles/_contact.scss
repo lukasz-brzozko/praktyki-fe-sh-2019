@@ -45,6 +45,11 @@
         @include mq-desktop-medium {
             margin-left: $site-margin-left - $site-margin-decrement
         }
+
+        @include mq-desktop-small {
+            margin-left: $site-margin-mobile;
+            margin-right: $site-margin-mobile;
+        }
     }
 
     &__input-container {

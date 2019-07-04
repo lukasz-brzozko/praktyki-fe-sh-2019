@@ -17,18 +17,29 @@
         margin-left: $site-margin-left;
 
         @include mq-desktop-medium {
-            margin-left: $site-margin-left - $site-margin-decrement
+            margin-left: $site-margin-left - $site-margin-decrement;
+        }
+
+        @include mq-desktop-small {
+            margin-left: $site-margin-mobile;
+            margin-right: $site-margin-mobile;
         }
     }
 
     &__text-container {
         padding-top: 15vh;
         max-width: 40%;
+
+        @include mq-desktop-small {
+            max-width: 100%;
+            padding-top: 5vh;
+        }
     }
 
     &__image-container {
 
-        &--external {
+        &--external,
+        &-mobile--external {
             position: relative;
             height: 100%;
             width: 50%;
@@ -40,17 +51,37 @@
             overflow: hidden;
         }
 
-        &--internal {
+        &--internal,
+        &-mobile--internal {
             position: absolute;
             bottom: -15%;
             left: 50%;
-            transform: translate(-50%, 0);
+            transform: translate(-50%, 5%);
             width: 100%;
-            height: 110%;
+            height: 120%;
             background-image: url('/src/img/hand.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 80%;
+        }
+
+        @include mq-desktop-small {
+            display: none;
+        }
+
+        &-mobile {
+
+            &--internal,
+            &--external {
+                display: none;
+
+                @include mq-desktop-small {
+                    display: block;
+                    margin: 0 auto;
+                    width: 90vw;
+                    max-width: 700px;
+                }
+            }
         }
     }
 
@@ -62,6 +93,11 @@
 
         @include mq-desktop-medium {
             margin-left: $site-margin-left - $site-margin-decrement
+        }
+
+        @include mq-desktop-small {
+            margin-left: $site-margin-mobile;
+            margin-right: $site-margin-mobile;
         }
 
         .feature {
@@ -83,6 +119,11 @@
 
         @include mq-desktop-medium {
             margin-left: $site-margin-left - $site-margin-decrement
+        }
+
+        @include mq-desktop-small {
+            margin-left: $site-margin-mobile;
+            margin-right: $site-margin-mobile;
         }
 
         .solutions {
@@ -133,6 +174,17 @@
             font-size: 6rem;
         }
 
+        @include mq-desktop-small {
+            font-size: 5rem;
+            line-height: 60px;
+            width: 100%;
+        }
+
+        @include mq-mobile-large {
+            font-size: 4rem;
+            line-height: 50px;
+        }
+
 
         &-description {
             @include description-text;
@@ -141,6 +193,11 @@
 
             @include mq-desktop-medium {
                 font-size: 2.5rem;
+            }
+
+            @include mq-desktop-small {
+                max-width: 100%;
+                width: 100%;
             }
         }
     }
