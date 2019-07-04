@@ -17,7 +17,7 @@
         height: $header-mobile-height;
     }
 
-    &__flex-cont {
+    &__container {
         display: flex;
         justify-content: space-between;
         margin-top: $header-top-menu-margin;
@@ -25,76 +25,74 @@
         @include mq-mobile-large {
             margin-top: 0;
         }
+    }
 
-        .logo {
-            transform: translate(10%, -13px);
+    &__main-menu {
+        display: flex;
+        justify-content: space-between;
 
-            @include mq-mobile-large {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 40px;
-                height: 25px;
-                overflow: hidden;
-                transform: translate(20px, -50%)
-            }
+        @include mq-mobile-large {
+            display: none;
+        }
+    }
 
-            &__image {
-                cursor: pointer;
-            }
+    &__main-menu-item {
+        font-size: 1.7rem;
+
+        &--language {
+
+            margin: 0 4vw 0 3vw
         }
 
-        .top-menu {
-            &__main-menu {
-                display: flex;
-                justify-content: space-between;
-
-                @include mq-mobile-large {
-                    display: none;
-                }
-
-                .main-menu__main-menu-item {
-                    font-size: 1.7rem;
-
-                    &--language {
-                        .globe {
-                            margin: 0 4vw 0 3vw
-                        }
-                    }
-
-                    &--sign-in {
-                        margin-right: 30px;
-                    }
-
-                    &--menu {
-                        display: flex;
-                        width: 255px;
-                        justify-content: space-between;
-
-                        .menu__menu-item {
-                            font-size: 1.3rem;
-                        }
-                    }
-
-                    &--get-app {
-                        display: block;
-                        box-sizing: border-box;
-                        width: 280px;
-                        height: 80px;
-                        padding: 47px 138px 16px 57px;
-                        background-color: $btn-bgc;
-                        transform: translateY(-50px);
-                        cursor: pointer;
-
-                        .app-text {
-                            color: #fff;
-                            display: block;
-                            width: 200%;
-                        }
-                    }
-                }
-            }
+        &--sign-in {
+            margin-right: 30px;
         }
+
+        &--get-app {
+            display: block;
+            box-sizing: border-box;
+            width: 280px;
+            height: 80px;
+            padding: 47px 138px 16px 57px;
+            background-color: $btn-bgc;
+            transform: translateY(-50px);
+            cursor: pointer;
+        }
+    }
+
+    &__app-text {
+        color: #fff;
+        display: block;
+        width: 200%;
+    }
+
+    &__logo {
+        transform: translate(10%, -13px);
+
+        @include mq-mobile-large {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 40px;
+            height: 25px;
+            overflow: hidden;
+            transform: translate(20px, -50%)
+        }
+    }
+
+    &__image {
+        cursor: pointer;
+    }
+
+    &__submenu {
+        display: flex;
+        width: 255px;
+        justify-content: space-between;
+
+        &-item {
+            font-size: 1.3rem;
+        }
+
     }
 
     &__menu-hamburger {
@@ -124,11 +122,15 @@
 .workplace-menu {
     display: flex;
     justify-content: flex-start;
-    margin: 0 auto 0 18vw;
+    margin: 0 auto 0 $site-margin-left;
     width: 50vw;
-    min-width: 650px;
+    min-width: 700px;
 
-    &__ul {
+    @include mq-desktop-medium {
+        margin-left: $site-margin-left - $site-margin-decrement
+    }
+
+    &__list {
         display: flex;
         justify-content: space-between;
         width: 850px;

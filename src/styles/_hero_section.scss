@@ -11,20 +11,24 @@
         margin-top: $header-mobile-height;
     }
 
-    &__container {
+    &__section-container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: $site-margin-left;
 
-        &--section {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 18vw;
+        @include mq-desktop-medium {
+            margin-left: $site-margin-left - $site-margin-decrement
         }
+    }
 
-        &--text {
-            padding-top: 173px;
-            max-width: 40%;
-        }
+    &__text-container {
+        padding-top: 15vh;
+        max-width: 40%;
+    }
 
-        &--image {
+    &__image-container {
+
+        &--external {
             position: relative;
             height: 100%;
             width: 50%;
@@ -32,91 +36,112 @@
             background-image: url('/src/img/desks.png');
             background-repeat: no-repeat;
             background-position: 60% 60%;
-            background-size: 700px;
+            background-size: 100%;
             overflow: hidden;
         }
 
-        &--internal-image {
+        &--internal {
+            position: absolute;
+            bottom: -15%;
+            left: 50%;
+            transform: translate(-50%, 0);
             width: 100%;
-            height: 100%;
+            height: 110%;
             background-image: url('/src/img/hand.png');
             background-repeat: no-repeat;
-            background-position: center -20%;
+            background-position: center;
+            background-size: 80%;
+        }
+    }
+
+    &__features-container {
+        display: flex;
+        justify-content: space-between;
+        width: 1300px;
+        margin: 6vh auto 0 $site-margin-left;
+
+        @include mq-desktop-medium {
+            margin-left: $site-margin-left - $site-margin-decrement
         }
 
-        &--solutions {
-            margin: 50px auto 0 18vw;
+        .feature {
+            width: 350px;
 
-            .solutions {
+            &__title {
+                @include feature-title;
+                margin-bottom: 3vh;
+            }
 
-                &__title {
-                    @include solutions-title;
-                    margin: 10vh 0 3vh;
-                }
-
-                &__ul {
-                    display: flex;
-                    justify-content: space-between;
-                    overflow: hidden;
-                }
-
-                &__item {
-                    flex-shrink: 0;
-                    box-sizing: border-box;
-                    width: 310px;
-                    height: 500px;
-                    padding: 60px;
-                    margin-right: 20px;
-                    background-color: #fff;
-                }
-
-                &__container {
-                    overflow: hidden;
-                }
-
-                &__subtitle {
-                    @include solutions-subtitle;
-                    margin: 8vh 0 3vh;
-                }
-
-                &__description {
-                    @include feature-description;
-                }
+            &__description {
+                @include feature-description;
             }
         }
+    }
 
-        &--features {
-            display: flex;
-            justify-content: space-between;
-            width: 1300px;
-            margin: 6vh auto 0 18vw;
+    &__solutions-container {
+        margin: 50px auto 0 $site-margin-left;
 
-            .feature {
-                width: 350px;
+        @include mq-desktop-medium {
+            margin-left: $site-margin-left - $site-margin-decrement
+        }
 
-                &__title {
-                    @include feature-title;
-                    margin-bottom: 3vh;
-                }
+        .solutions {
 
-                &__description {
-                    @include feature-description;
-                }
+            &__title {
+                @include solutions-title;
+                margin: 10vh 0 3vh;
+            }
+
+            &__list {
+                display: flex;
+                justify-content: space-between;
+                overflow: hidden;
+            }
+
+            &__item {
+                flex-shrink: 0;
+                box-sizing: border-box;
+                width: 310px;
+                height: 500px;
+                padding: 60px;
+                margin-right: 20px;
+                background-color: #fff;
+            }
+
+            &__container {
+                overflow: hidden;
+            }
+
+            &__subtitle {
+                @include solutions-subtitle;
+                margin: 8vh 0 3vh;
+            }
+
+            &__description {
+                @include feature-description;
             }
         }
     }
 
     &__title {
-        &--headline {
-            @include big_headline_text;
-            width: 570px;
-            height: 155px;
+
+        @include big_headline_text;
+        width: 570px;
+        height: 155px;
+
+        @include mq-desktop-medium {
+            font-size: 6rem;
         }
 
-        &--description {
+
+        &-description {
             @include description-text;
             max-width: 600px;
-            margin: 45px 0 59px;
+            margin: 5vh 0 6vh;
+
+            @include mq-desktop-medium {
+                font-size: 2.5rem;
+            }
         }
     }
 

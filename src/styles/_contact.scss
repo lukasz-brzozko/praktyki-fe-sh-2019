@@ -7,6 +7,12 @@
     flex-direction: column;
     justify-content: space-between;
 
+    &__tabs-container {
+        display: flex;
+        justify-content: center;
+        max-width: 1200px;
+        margin-left: 18vw;
+    }
 
     &__tab {
         position: relative;
@@ -30,37 +36,32 @@
     &__form {
         width: 1200px;
         height: 50vh;
-        margin-left: 18vw;
+        margin-left: $site-margin-left;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         align-content: center;
-    }
 
-    &__container {
-
-        &--tabs {
-            display: flex;
-            justify-content: center;
-            max-width: 1200px;
-            margin-left: 18vw;
-        }
-
-        &--input {
-            position: relative;
-            width: 40%;
-            margin-bottom: 50px;
-
-            &:nth-last-child(2) {
-                width: 100%;
-            }
-        }
-
-        &--button {
-            width: 1200px;
-            text-align: center;
+        @include mq-desktop-medium {
+            margin-left: $site-margin-left - $site-margin-decrement
         }
     }
+
+    &__input-container {
+        position: relative;
+        width: 40%;
+        margin-bottom: 50px;
+
+        &:nth-last-child(2) {
+            width: 100%;
+        }
+    }
+
+    &__button-container {
+        width: 1200px;
+        text-align: center;
+    }
+
 
     &__label {
         @include form-label;
