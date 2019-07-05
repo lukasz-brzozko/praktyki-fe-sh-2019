@@ -7,11 +7,22 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include mq-desktop-medium {
+        margin-left: $site-margin-left - $site-margin-decrement
+    }
+
+    @include mq-desktop-small {
+        justify-content: flex-start;
+        margin-left: $site-margin-mobile;
+        margin-right: $site-margin-mobile;
+    }
+
     &__tabs-container {
         display: flex;
         justify-content: center;
         max-width: 1200px;
-        margin-left: 18vw;
+        margin-left: $site-margin-left;
+
     }
 
     &__tab {
@@ -34,22 +45,15 @@
     }
 
     &__form {
-        width: 1200px;
-        height: 50vh;
-        margin-left: $site-margin-left;
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 8vh;
+        margin: 8vh auto 0;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         align-content: center;
 
-        @include mq-desktop-medium {
-            margin-left: $site-margin-left - $site-margin-decrement
-        }
-
-        @include mq-desktop-small {
-            margin-left: $site-margin-mobile;
-            margin-right: $site-margin-mobile;
-        }
     }
 
     &__input-container {
@@ -57,13 +61,18 @@
         width: 40%;
         margin-bottom: 50px;
 
-        &:nth-last-child(2) {
+        @include mq-mobile-large {
+            width: 100%;
+        }
+
+        &--message {
             width: 100%;
         }
     }
 
     &__button-container {
-        width: 1200px;
+        width: 100%;
+        max-width: 1200px;
         text-align: center;
     }
 
