@@ -1,0 +1,49 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+&__solutions-container {
+    margin: 50px auto 0 $site-margin-left;
+
+    @include mq-desktop-medium {
+        margin-left: $site-margin-left - $site-margin-decrement
+    }
+
+    @include mq-desktop-small {
+        margin-left: $site-margin-mobile;
+        margin-right: $site-margin-mobile;
+    }
+}
+
+&__solutions-title {
+    @include solutions-title;
+    margin: 10vh 0 3vh;
+}
+
+&__solutions-list {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+&__solutions-item {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 310px;
+    height: 500px;
+    padding: 60px;
+    margin-right: 20px;
+    background-color: #fff;
+}
+
+&__solution-container {
+    overflow: hidden;
+}
+
+&__solution-subtitle {
+    @include solutions-subtitle;
+    margin: 8vh 0 3vh;
+}
+
+&__solution-description {
+    @include feature-description;
+}

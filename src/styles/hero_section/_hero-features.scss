@@ -1,0 +1,63 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+&__features-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 1300px;
+    min-width: 900px;
+    margin: 6vh auto 0 $site-margin-left;
+
+    @include mq-desktop-medium {
+        margin-left: $site-margin-left - $site-margin-decrement;
+    }
+
+    @include mq-desktop-small {
+        margin-left: $site-margin-mobile;
+        margin-right: $site-margin-mobile;
+        justify-content: center;
+        min-width: auto;
+    }
+
+    @include mq-mobile-large-horizontal {
+        margin-top: 15vh;
+    }
+}
+
+&__feature-container {
+    max-width: 350px;
+
+    @include mq-desktop-medium {
+        max-width: 250px;
+    }
+
+    @include mq-desktop-small {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    &:nth-child(n+2) {
+
+        @include mq-desktop-small {
+            display: none;
+        }
+    }
+}
+
+&__feature-title {
+    @include feature-title;
+    margin-bottom: 3vh;
+
+    @include mq-desktop-medium {
+        font-size: 2.8rem;
+    }
+
+    @include mq-desktop-small {
+        font-size: 2.6rem;
+    }
+}
+
+&__feature-description {
+    @include feature-description;
+}
