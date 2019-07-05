@@ -13,8 +13,10 @@ $site-max-width: 1920px;
 $site-margin-left: 15vw;
 $site-margin-decrement: 10;
 $site-margin-mobile: 20px;
+$big-container-width: 1200px;
 
+$header-height: 150px;
 $header-top-menu-margin: 50px;
 $header-mobile-height: 60px;
 $header-padding-bottom: 50px;
-$hero-section-top-marging: 99px+$header-top-menu-margin+$header-padding-bottom;
+$hero-section-top-marging: $header-height+$header-padding-bottom;

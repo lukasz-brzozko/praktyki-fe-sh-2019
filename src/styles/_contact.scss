@@ -21,7 +21,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        max-width: 1200px;
+        max-width: $big-container-width;
 
         @include mq-desktop-small {
             margin-left: 0;
@@ -50,7 +50,7 @@
 
     &__form {
         width: 100%;
-        max-width: 1200px;
+        max-width: $big-container-width;
         margin: 8vh auto 0 0;
         display: flex;
         justify-content: space-between;
@@ -62,9 +62,15 @@
         position: relative;
         width: 40%;
         margin-bottom: 50px;
+        margin-right: 20px;
+
+        @include mq-desktop-small {
+            margin-right: 0;
+        }
 
         @include mq-mobile-large {
             width: 100%;
+            margin-right: 0;
         }
 
         &--message {
@@ -74,7 +80,7 @@
 
     &__button-container {
         width: 100%;
-        max-width: 1200px;
+        max-width: $big-container-width;
         text-align: center;
     }
 
@@ -114,6 +120,6 @@
         line-height: 60px;
         background-color: $btn-bgc;
         color: #fff;
-        font-size: 17px;
+        font-size: 1.7rem;
     }
 }

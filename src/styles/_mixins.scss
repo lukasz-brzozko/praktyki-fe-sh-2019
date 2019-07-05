@@ -2,13 +2,13 @@
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: #3146ff;
-    font-size: 70px;
+    font-size: 7rem;
     line-height: 80px;
 }
 
 @mixin description-text {
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 40px;
 }
 
@@ -16,47 +16,47 @@
     font-family: 'Poppins';
     font-weight: bold;
     color: #000;
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 40px;
 }
 
 @mixin feature-description {
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 17px;
+    font-size: 1.7rem;
     line-height: 25px;
 }
 
 @mixin solutions-title {
     font-family: "Roboto";
     color: #000;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
 
 @mixin solutions-subtitle {
     font-family: 'Poppins';
     font-weight: bold;
     color: #000;
-    font-size: 19px;
+    font-size: 1.9rem;
     line-height: 26px;
 }
 
 @mixin form-label {
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 @mixin form-input {
     font-family: 'Roboto';
     color: #000;
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 @mixin contact-tab {
     font-family: 'Roboto';
     color: #000;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
 
 @mixin after-underline {

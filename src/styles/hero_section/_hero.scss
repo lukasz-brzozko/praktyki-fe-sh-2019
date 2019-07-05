@@ -98,7 +98,6 @@
     }
 
     &__mobile-store-image {
-
         @include mq-desktop-small {
             width: 80%;
             min-width: 150px;
