@@ -87,3 +87,15 @@
         @content;
     }
 }
+
+@mixin mq-mobile-medium {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mq-mobile-small {
+    @media (max-width: 370px) {
+        @content;
+    }
+}
