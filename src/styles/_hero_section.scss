@@ -172,6 +172,10 @@
                 display: flex;
                 justify-content: space-between;
                 overflow: hidden;
+
+                @include mq-mobile-medium {
+                    justify-content: center;
+                }
             }
 
             &__item {
@@ -182,6 +186,12 @@
                 padding: 60px;
                 margin-right: 20px;
                 background-color: #fff;
+
+                &:nth-child(n+2) {
+                    @include mq-mobile-medium {
+                        display: none;
+                    }
+                }
             }
 
             &__container {
