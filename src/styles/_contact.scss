@@ -2,7 +2,7 @@
 @import 'variables.scss';
 
 .contact {
-    margin: 10vh auto 0;
+    margin: 10vh auto 5vh $site-margin-left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,9 +20,13 @@
     &__tabs-container {
         display: flex;
         justify-content: center;
+        width: 100%;
         max-width: 1200px;
-        margin-left: $site-margin-left;
 
+        @include mq-desktop-small {
+            margin-left: 0;
+            justify-content: flex-start;
+        }
     }
 
     &__tab {
@@ -47,13 +51,11 @@
     &__form {
         width: 100%;
         max-width: 1200px;
-        margin-top: 8vh;
-        margin: 8vh auto 0;
+        margin: 8vh auto 0 0;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         align-content: center;
-
     }
 
     &__input-container {

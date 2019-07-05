@@ -99,3 +99,15 @@
         @content;
     }
 }
+
+@mixin mq-mobile-large-horizontal {
+    @media (orientation: landscape) and(max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin mq-mobile-small-horizontal {
+    @media (orientation: landscape) and (max-width: 700px) {
+        @content;
+    }
+}

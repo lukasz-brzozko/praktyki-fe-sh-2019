@@ -23,18 +23,17 @@
 
         @include mq-desktop-small {
             margin-left: $site-margin-mobile;
-            margin-right: $site-margin-mobile;
         }
     }
 
     &__text-container {
         padding-top: 15vh;
         max-width: 40%;
-        overflow: hidden;
 
         @include mq-desktop-small {
             max-width: 100%;
             padding-top: 5vh;
+            overflow: hidden;
         }
     }
 
@@ -111,6 +110,10 @@
             margin-right: $site-margin-mobile;
             justify-content: center;
             min-width: auto;
+        }
+
+        @include mq-mobile-large-horizontal {
+            margin-top: 15vh;
         }
 
         .feature {
@@ -231,6 +234,13 @@
             font-size: 3.6rem;
         }
 
+        @include mq-mobile-large-horizontal {
+            margin-bottom: -25vh;
+        }
+
+        @include mq-mobile-small-horizontal {
+            margin-bottom: -45vh;
+        }
 
         &-description {
             @include description-text;
@@ -246,6 +256,7 @@
                 width: 100%;
                 font-size: 2.5rem;
                 line-height: 3.7rem;
+                margin-right: $site-margin-mobile;
             }
 
             @include mq-mobile-large {
