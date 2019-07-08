@@ -1,0 +1,83 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+&__section-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: $site-margin-left;
+
+    @include mq-desktop-medium {
+        margin-left: $site-margin-left - $site-margin-decrement;
+    }
+
+    @include mq-desktop-small {
+        margin-left: $site-margin-mobile;
+    }
+}
+
+&__text-container {
+    padding-top: 15vh;
+    max-width: 40%;
+
+    @include mq-desktop-small {
+        max-width: 100%;
+        padding-top: 5vh;
+        overflow: hidden;
+    }
+}
+
+&__image-container {
+
+    &--external,
+    &-mobile--external {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        height: 700px;
+        background-image: url('/src/img/desks.png');
+        background-repeat: no-repeat;
+        background-position: 60% 60%;
+        background-size: 100%;
+        overflow: hidden;
+    }
+
+    &--internal,
+    &-mobile--internal {
+        position: absolute;
+        bottom: -15%;
+        left: 50%;
+        transform: translate(-50%, 5%);
+        width: 100%;
+        height: 120%;
+        background-image: url('/src/img/hand.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+    }
+
+    @include mq-desktop-small {
+        display: none;
+    }
+
+    &-mobile {
+
+        &--internal,
+        &--external {
+            display: none;
+
+            @include mq-desktop-small {
+                display: block;
+                margin: 0 auto;
+                width: 90vw;
+                max-width: 700px;
+                min-width: 400px;
+            }
+        }
+
+        &--external {
+            @include mq-mobile-medium {
+                height: 500px;
+            }
+        }
+    }
+}

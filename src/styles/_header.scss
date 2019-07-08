@@ -6,6 +6,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    height: 150px;
     width: 100%;
     max-width: $site-max-width;
     padding-bottom: $header-padding-bottom;
@@ -40,8 +41,7 @@
         font-size: 1.7rem;
 
         &--language {
-
-            margin: 0 4vw 0 3vw
+            margin: 0 4vw 0 3vw;
         }
 
         &--sign-in {
@@ -53,7 +53,7 @@
             box-sizing: border-box;
             width: 280px;
             height: 80px;
-            padding: 47px 138px 16px 57px;
+            padding: 50px 140px 15px 60px;
             background-color: $btn-bgc;
             transform: translateY(-50px);
             cursor: pointer;
@@ -92,7 +92,6 @@
         &-item {
             font-size: 1.3rem;
         }
-
     }
 
     &__menu-hamburger {
@@ -185,7 +184,7 @@
         }
 
         &::after {
-            @include after-underline
+            @include after-underline;
         }
 
         &:nth-child(n+2):hover {
